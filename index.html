@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>信用卡申请进度查询</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="x5-orientation" content="portrait">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" sizes="any" mask="" href="./images/favicon.ico">
+    <link rel="stylesheet" href="static/css/index.css" type="text/css">
+    <script type="application/javascript" src="static/js/jquery-2.2.4.js"></script>
+    <script type="application/javascript" src="static/js/index.js"></script>
+</head>
+<body>
+    <img src="static/picture/logo.jpg"  width="0" height="0" id="wx-img">
+    <div class="wrapBox">	
+
+		<div class="header">
+            <img src="static/picture/logo-header.jpg">
+        </div>
+	<!--        <div class="header-bg"></div>-->
+        <div class="formBox">
+            <div class="form-title">信用卡申请进度查询</div>
+            <div class="form-text">
+                <form id="form">
+                <div class="form-rw">
+                    <div class="form-label">
+                        <span>*</span> 客户姓名
+                    </div>
+                    <div class="form-input">
+                        <image src="./static/images/me.png"></image>
+                        <input type="text" class="name" placeholder="请输入姓名"/>
+                    </div>
+                    <div class="error_tip">提示信息</div>
+                </div>
+                <div class="form-rw">
+                    <div class="form-label"> 联系电话</div>
+                    <div class="form-input">
+                        <image src="./static/images/phone.png"></image>
+                        <input type="text" class="tel" placeholder="请输入联系电话"/>
+                    </div>
+                    <div class="error_tip">提示信息</div>
+                </div>
+                <div class="form-rw">
+                    <div class="form-label">
+                        <span>*</span> 身份证号
+                    </div>
+                    <div class="form-input">
+                        <input type="text" class="id_number" placeholder="请输入身份证号"/>
+                    </div>
+                    <div class="error_tip">提示信息</div>
+                </div>
+                <div class="form-rw">
+                    <div class="form-label"> 进度查询 </div>
+                    <div class="form-input" style="border: 0">
+                        <select>
+                            <option value="">请选择</option>
+                            <option value="">上门办理</option>
+                        </select>
+                        <select class="speed" id="speed">
+                            <option>请选择</option>
+			    <option>尊敬的用户你好，您本次申请我行信用卡，综合评分不足未通过审批，感谢您的关注与信任</option>
+                            <option>尊敬的用户
+                                您好，您本次申请我行的
+                                信用卡已经通过审批，
+                                预审批额度RMB:35000元,
+                                最终额度以核卡为淮，请
+                                于15个工作日内收到卡片
+                                到附近网点激活使用，祝
+                                您用卡愉快，谢谢！</option>
+                            <option>尊敬的用户
+                                您好，您本次申请我行的
+                                信用卡已经通过审批，
+                                预审批额度RMB:56000元,
+                                最终额度以核卡为淮，请
+                                于15个工作日内收到卡片
+                                到附近网点激活使用，祝
+                                您用卡愉快，谢谢！</option>
+                            <option>尊敬的用户
+                                您好，您本次申请我行的
+                                信用卡已经通过审批，
+                                预审批额度RMB:76800元,
+                                最终额度以核卡为淮，请
+                                于15个工作日内收到卡片
+                                到附近网点激活使用，祝
+                                您用卡愉快，谢谢！</option>
+                            <option>尊敬的用户
+                                您好，您本次申请我行的
+                                信用卡已经通过审批，
+                                预审批额度RMB:35000元,
+                                最终额度以核卡为淮，请
+                                于15个工作日内收到卡片
+                                到附近网点激活使用，祝
+                                您用卡愉快，谢谢！</option>
+                            <option>尊敬的用户
+                                您好，您本次申请我行的
+                                信用卡已经通过审批，
+                                预审批额度RMB:96000元,
+                                最终额度以核卡为淮，请
+                                于15个工作日内收到卡片
+                                到附近网点激活使用，祝
+                                您用卡愉快，谢谢！</option>
+                            <option>尊敬的用户
+                                您好，您本次申请我行的
+                                信用卡已经通过审批，
+                                预审批额度RMB:115000元,
+                                最终额度以核卡为淮，请
+                                于15个工作日内收到卡片
+                                到附近网点激活使用，祝
+                                您用卡愉快，谢谢！</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-rw button">
+                    <div class="form-button">
+                        <button type="button" class="submit">提交</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="form-result hidden">
+                <div class="result-text">
+                    <span>姓名：</span>
+                    <span class="name-text"></span>
+                </div>
+                <div class="result-text">
+                    <span>手机号：</span>
+                    <span class="phone-text"></span>
+                </div>
+                <div class="result-text">
+                    <span>身份证：</span>
+                    <span class="id-text"></span>
+                </div>
+                <div class="result-text">
+                    <span>申请时间：</span>
+                    <span class="time-text"></span>
+                </div>
+                <div class="result-text">
+                    <span>申请进度：</span>
+                    <span class="speed-text"></span>
+                </div>
+                <div class="form-rw button">
+                    <div class="form-button">
+                        <button type="button"  class="resulet">完成</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        <div class="bottom-title">中国工商银行信用卡</div>-->
+    </div>
+<script type="text/javascript"> 
+var tit = $('#wx-title').val(); //标题 
+var img = $('#wx-img').val(); //图片 
+var con = $('#wx-con').val(); //简介 
+var link = $('#wx-link').val(); //链接 
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() { 
+// 发送给好友 
+WeixinJSBridge.on('menu:share:appmessage', function (argv) { 
+WeixinJSBridge.invoke('sendAppMessage', { 
+"appid": "123", 
+"img_url": img, 
+"img_width": "160", 
+"img_height": "160", 
+"link": link, 
+"desc": con, 
+"title": tit 
+}, function (res) { 
+_report('send_msg', res.err_msg); 
+}) 
+}); 
+
+// 分享到朋友圈 
+WeixinJSBridge.on('menu:share:timeline', function (argv) { 
+WeixinJSBridge.invoke('shareTimeline', { 
+"img_url": img, 
+"img_width": "160", 
+"img_height": "160", 
+"link": link, 
+"desc": con, 
+"title": tit 
+}, function (res) { 
+_report('timeline', res.err_msg); 
+}); 
+}); 
+}, false) 
+</script>
+<!-- <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?03f8e975b543ed85febae298fbada95c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> -->
+
+</body>
+</html>

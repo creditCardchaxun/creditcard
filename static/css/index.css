@@ -1,0 +1,204 @@
+
+/* 清除内外边距 */
+*{ /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+li{ list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+/*a:hover { text-decoration: underline; }*/
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+.wrapBox{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #eaeaea;
+    padding-bottom: 5px;
+}
+.header{
+    width: 100%;
+}
+.header img{
+    width: 100%;
+}
+.header-bg{
+    background: url("../images/bg.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: 160px;
+    margin-top: -4px;
+}
+.formBox{
+    background: #ffffff;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 0.8em;
+    /*margin-top: -12px;*/
+    background-clip: padding-box;
+    margin-bottom: 35px
+}
+.formBox .form-title{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 550;
+    padding: 30px 0;
+}
+.form-title{
+    width: 100%;
+    padding-bottom: 60px;
+}
+.form-text,.form-result{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+.form-result .result-text{
+    padding: 15px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.error_tip{
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+/*.form-result .result-text span{*/
+/*    width:100px;*/
+/*}*/
+/*.form-result .result-text .result-text{*/
+/*    flex: 1;*/
+/*    padding-left: 100px;*/
+/*}*/
+.form-text .form-rw{
+    margin-bottom: 30px;
+}
+.formBox .form-text span{
+    color: red;
+}
+.formBox .form-label{
+    font-size: 1em;
+    height: 30px;
+    font-weight: bold;
+}
+.formBox .form-text .form-input{
+    width: 100%;
+    outline: none;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+.form-input img{
+    width: 22px;
+    margin-left: 10px;
+}
+.form-input input{
+    flex: 1;
+    padding: 6px;
+    border: 0;
+}
+.form-input input:focus{
+    border: 0 !important;
+    outline: none;
+}
+.form-input select{
+    width: 48%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 6px;
+    color: #cccccc;
+    background-color: #ffffff;
+}
+.form-input select option{
+    color: black;
+}
+.form-input select option:first-child{
+    color: #666666;
+}
+.form-input select:nth-child(2){
+    margin-left: 20px;
+}
+.form-rw .form-button button{
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #ffffff;
+
+}
+.submit{
+    background-color: #a47355;
+}
+.resulet{
+    background-color: #ffab03;
+}
+button a{
+    display: block;
+    color: #ffffff;
+}
+.button{
+    padding-bottom: 20px;
+}
+.bottom-title{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+.form-result .button{
+    margin-top: 50px;
+}
