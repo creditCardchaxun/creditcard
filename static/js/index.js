@@ -43,8 +43,8 @@ $(function () {
     function fnCheckPhone(){
         let value = phone.val()
 
-        let text  = /^1[345678]\d{9}$/;
-
+        // let text  = /^1[3456789]\d{9}$/;
+        let text=/^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/; 
         if (value == ''){
             phone.parent().next().show().html('手机号不能为空')
             flagPhone = false
